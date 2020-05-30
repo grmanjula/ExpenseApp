@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Expense Entry"
+             x:Class="ExpenseApp.ExpenseEntryPage">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Editor x:Name="expenseeditorName"
+                    Placeholder="Enter the name of your Expense"
+                   Text="{Binding Name}"                    
+                    HeightRequest="100" />
+            <Editor x:Name="expenseeditorDate"
+                    Placeholder="Enter the Date of your Expense"
+                    Text="{Binding Date}"                    
+                    HeightRequest="100" />
+            <Editor x:Name="expenseeditorAmount"
+                    Placeholder="Enter the Expense Amount"
+                    Text="{Binding Amount}"                    
+                    HeightRequest="100"/>
+            <Editor x:Name="SelectExpenseCategoryIcon"
+                    Placeholder="Select the category of your Expense"
+                    Text="{Binding Category}"                    
+                    HeightRequest="100" />
+            <Picker x:Name="CategoryPicker"  HorizontalOptions="Center">
+                <Picker.Items>
+                    <x:String>Food</x:String>
+                    <x:String>Rent</x:String>
+                    <x:String>Insurance</x:String>
+                    <x:String>Education</x:String>
+                    <x:String>Miscellanous</x:String>
+                </Picker.Items>
+                
+
+            </Picker>
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width ="*"  />
+                    <ColumnDefinition Width="*"   />
+                </Grid.ColumnDefinitions>
+                <Button Text="Save" Clicked="OnSaveButtonClicked" />
+                <Button Text="Cancel" Grid.Column="1" Clicked="CancelButtonClicked" />
+                
+                
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -4,13 +4,50 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             Title=" Expenses"  
              x:Class="ExpenseApp.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
+    <!--<StackLayout>
+        --><!-- Place new controls here --><!--
+        <Label Text="Welcome to ExpenseApp!" 
            HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+              FontAttributes="Bold"
+           />
 
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width ="*"  />
+                <ColumnDefinition Width="*"   />
+            </Grid.ColumnDefinitions>
+            <Button Text="AddMoreExpenses" HorizontalOptions="CenterAndExpand" VerticalOptions="End"  Clicked="AddMoreExpensesButton_Clicked"/>
+
+            --><!--<Label Text="Enter A Code" VerticalOptions="Center" HorizontalOptions="Center" />
+            <Button Text="Reveal Code" x:Name="RevealCode" HorizontalOptions="CenterAndExpand" VerticalOptions="End"--><!--
+
+        </Grid>
+
+    </StackLayout>-->
+    <ContentPage.ToolbarItems>
+       
+        <ToolbarItem Text="+"
+                     Clicked="OnExpenseAdd_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <Button Text="Add MoreExpense" Clicked ="OnExpenseAdd_Clicked"/>
+        <ListView x:Name="listView"
+          Margin=" 20"
+           ItemSelected="OnlistView_ItemSelected" >
+          <!--ItemsSource="{x:Binding expenses}"-->
+
+         
+          
+          
+          <ListView.ItemTemplate>
+        <DataTemplate>
+            <TextCell Text="{Binding ExpenseName}" Detail="{Binding Date} " />
+            
+        </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    </StackLayout>
 </ContentPage>
