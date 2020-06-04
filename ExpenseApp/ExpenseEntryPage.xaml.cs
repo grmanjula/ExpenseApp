@@ -15,6 +15,8 @@ namespace ExpenseApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ExpenseEntryPage : ContentPage
     {
+        public string Budget { get; set; }
+        public DateTime SelectedDate { get; set; }
         public ExpenseEntryPage()
         {
             InitializeComponent();
@@ -22,17 +24,19 @@ namespace ExpenseApp
 
         private async void OnSaveButtonClicked(object sender, EventArgs e)
         {
-           var expense = (Expense)BindingContext;
+            var expense = (Expense)BindingContext;
 
             var filename = Path.Combine(
                   Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
                   $"{Path.GetRandomFileName()}.expenses.txt");
-            // File.WriteAllText(filename, expenseeditorName.Text, expenseeditorDate, expenseeditorAmount, SelectExpenseCategoryIcon);
-            File.WriteAllText(filename, expenseeditorName.Text);
-            //update
-            // File.WriteAllText(expense.FileName, expenseeditorName.Text, expenseeditorAmount.);
 
-
+            var picker = expenseeditorDate as DatePicker;
+            StringBuilder text = new StringBuilder();
+            text.Append(expenseeditorName.Text + System.Environment.NewLine);
+            text.Append(picker.Date.ToString() + System.Environment.NewLine);
+            text.Append((expenseeditorAmount).Text.ToString() + System.Environment.NewLine);
+            text.Append((CategoryPicker).SelectedItem.ToString() + System.Environment.NewLine);
+            File.WriteAllText(filename, text.ToString());
             await Navigation.PopModalAsync();
 
         }
@@ -46,6 +50,11 @@ namespace ExpenseApp
             //}
             // expenseeditorName.Text = string.Empty;
             await Navigation.PopModalAsync();
+
+        }
+        private void expenseeditorDate_DateSelected(object sender, DateChangedEventArgs e)
+        {
+            SelectedDate = e.NewDate;
 
         }
     }

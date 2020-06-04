@@ -1,3 +1,7 @@
+C:\Users\user1\source\repos\ExpenseApp\ExpenseApp\bin\Debug\netstandard2.0\ExpenseApp.deps.json
+C:\Users\user1\source\repos\ExpenseApp\ExpenseApp\bin\Debug\netstandard2.0\ExpenseApp.dll
+C:\Users\user1\source\repos\ExpenseApp\ExpenseApp\bin\Debug\netstandard2.0\ref\ExpenseApp.dll
+C:\Users\user1\source\repos\ExpenseApp\ExpenseApp\bin\Debug\netstandard2.0\ExpenseApp.pdb
 C:\Users\user1\source\repos\ExpenseApp\ExpenseApp\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\user1\source\repos\ExpenseApp\ExpenseApp\obj\Debug\netstandard2.0\BudgetEntry.xaml.g.cs
 C:\Users\user1\source\repos\ExpenseApp\ExpenseApp\obj\Debug\netstandard2.0\ExpenseEntryPage.xaml.g.cs
@@ -5,12 +9,8 @@ C:\Users\user1\source\repos\ExpenseApp\ExpenseApp\obj\Debug\netstandard2.0\MainP
 C:\Users\user1\source\repos\ExpenseApp\ExpenseApp\obj\Debug\netstandard2.0\ExpenseApp.csproj.CoreCompileInputs.cache
 C:\Users\user1\source\repos\ExpenseApp\ExpenseApp\obj\Debug\netstandard2.0\ExpenseApp.AssemblyInfoInputs.cache
 C:\Users\user1\source\repos\ExpenseApp\ExpenseApp\obj\Debug\netstandard2.0\ExpenseApp.AssemblyInfo.cs
+C:\Users\user1\source\repos\ExpenseApp\ExpenseApp\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\user1\source\repos\ExpenseApp\ExpenseApp\obj\Debug\netstandard2.0\ExpenseApp.dll
 C:\Users\user1\source\repos\ExpenseApp\ExpenseApp\obj\Debug\netstandard2.0\ref\ExpenseApp.dll
 C:\Users\user1\source\repos\ExpenseApp\ExpenseApp\obj\Debug\netstandard2.0\ExpenseApp.pdb
-C:\Users\user1\source\repos\ExpenseApp\ExpenseApp\bin\Debug\netstandard2.0\ExpenseApp.deps.json
-C:\Users\user1\source\repos\ExpenseApp\ExpenseApp\bin\Debug\netstandard2.0\ExpenseApp.dll
-C:\Users\user1\source\repos\ExpenseApp\ExpenseApp\bin\Debug\netstandard2.0\ref\ExpenseApp.dll
-C:\Users\user1\source\repos\ExpenseApp\ExpenseApp\bin\Debug\netstandard2.0\ExpenseApp.pdb
-C:\Users\user1\source\repos\ExpenseApp\ExpenseApp\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\user1\source\repos\ExpenseApp\ExpenseApp\obj\Debug\netstandard2.0\ExpenseApp.csprojAssemblyReference.cache

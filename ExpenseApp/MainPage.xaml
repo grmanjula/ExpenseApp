@@ -7,37 +7,60 @@
              Title=" Expenses"  
              x:Class="ExpenseApp.MainPage">
 
-    <!--<StackLayout>
-        --><!-- Place new controls here --><!--
-        <Label Text="Welcome to ExpenseApp!" 
-           HorizontalOptions="Center"
-              FontAttributes="Bold"
-           />
+    <StackLayout Margin="20,35,20,20">
+        <!--<Label Text="If you haven't set your budget, then input your monthly goal for expenses."
+               HorizontalOptions="FillAndExpand" LineBreakMode="WordWrap" FontSize="Large"
+               TextDecorations="None" FontAttributes="Bold" TextColor="Black"/>
 
+        <Editor x:Name="Budget"
+               
+                Placeholder="Set your budget for this month" PlaceholderColor="Black"
+                HeightRequest="70"/>-->
+       
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width ="*"  />
                 <ColumnDefinition Width="*"   />
             </Grid.ColumnDefinitions>
-            <Button Text="AddMoreExpenses" HorizontalOptions="CenterAndExpand" VerticalOptions="End"  Clicked="AddMoreExpensesButton_Clicked"/>
+            <!--<Button Text="AddMoreExpenses" HorizontalOptions="CenterAndExpand" VerticalOptions="End"  Clicked="AddMoreExpensesButton_Clicked"/>-->
+        </Grid>
+        <Button Text="Add MoreExpense" Clicked ="OnExpenseAdd_Clicked"/>
+        
+        <ListView x:Name="listView"
+          Margin=" 20"
+           ItemSelected="OnlistView_ItemSelected" >
+            <!--ItemsSource="{x:Binding expenses}"-->
 
-            --><!--<Label Text="Enter A Code" VerticalOptions="Center" HorizontalOptions="Center" />
+
+
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding ExpenseName}" Detail="{Binding Date} " />
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
+
+<!--<Label Text="Enter A Code" VerticalOptions="Center" HorizontalOptions="Center" />
             <Button Text="Reveal Code" x:Name="RevealCode" HorizontalOptions="CenterAndExpand" VerticalOptions="End"--><!--
 
-        </Grid>
+       
 
     </StackLayout>-->
-    <ContentPage.ToolbarItems>
+    <!--<contentpage.toolbaritems>
        
-        <ToolbarItem Text="+"
-                     Clicked="OnExpenseAdd_Clicked"/>
-    </ContentPage.ToolbarItems>
+        <toolbaritem text="+"
+                     clicked="onexpenseadd_clicked"/>
+    </contentpage.toolbaritems>
     <StackLayout>
         <Button Text="Add MoreExpense" Clicked ="OnExpenseAdd_Clicked"/>
         <ListView x:Name="listView"
           Margin=" 20"
            ItemSelected="OnlistView_ItemSelected" >
-          <!--ItemsSource="{x:Binding expenses}"-->
+          --><!--ItemsSource="{x:Binding expenses}"--><!--
 
          
           
@@ -50,4 +73,4 @@
         </ListView.ItemTemplate>
     </ListView>
     </StackLayout>
-</ContentPage>
+</ContentPage>-->

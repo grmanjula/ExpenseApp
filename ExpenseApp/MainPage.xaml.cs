@@ -18,33 +18,79 @@ namespace ExpenseApp
         public MainPage()
         {
             InitializeComponent();
+            /*var files = Directory.EnumerateFiles(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "*.expenses.txt");
+            foreach (var filename in files)
+            {
+                File.Delete(filename);
+            }*/
         }
-
         protected override void OnAppearing()
-        { 
+        {
+            //return;
+
+            //Budget.Text = $"BudgetExpense is {Budget}";
+            //M
+          //  budget.Text = $"BudgetExpense is {Budget}";
+
             var expenses = new List<Expense>();
 
            var files = Directory.EnumerateFiles(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "*.expenses.txt");
             foreach (var filename in files)
             {
+                var data = File.ReadAllText(filename);
+                string[] dataSplit = data.Split('\n');
+
+                // Do not populate the expenses when there are no records yet
+                if (dataSplit.Length <= 1)
+                    return;
+
+               // Console.WriteLine(dataSplit);
+
+
                 var expense = new Expense
                 {
-                    Text = File.ReadAllText(filename),
-                    FileName = filename,
-                   // ExpenseDate = File.GetCreationTime(filename)
-                    //M
-                    Date = File.GetCreationTime(filename)
+                   // ExpenseName =
+                    ExpenseName = dataSplit[0],
+                    ExpenseDate = Convert.ToDateTime(dataSplit[1]),
+                   Amount = Convert.ToDecimal(dataSplit[2]),
+                   // Amount = dataSplit[2],
+                    Category = Convert.ToString(dataSplit[3]),
+                   
                 };
+
                 expenses.Add(expense);
+                
             }
+
+            listView.ItemsSource = expenses;
            // listView.ItemsSource = expenses.OrderBy(e => e.ExpenseDate).ToList();
-            //M
-            listView.ItemsSource = expenses.OrderBy(e => e.Date).ToList();
         }
-
-        private void AddMoreExpensesButton_Clicked(object sender, EventArgs e)
+        
+            
+        
+        private async void AddMoreExpensesButton_Clicked(object sender, EventArgs e)
         {
+            //var expensePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.
+            //   LocalApplicationData),
+            //   $"{Path.GetRandomFileName()}.expenses.txt");
+            await Navigation.PushModalAsync(new ExpenseEntryPage
+            {
+                BindingContext = new Expense()
+            });
 
+
+            //var expenses = new Expenses
+            //{
+
+
+            //    Name = nameLabel.Text,
+            //    Amount = Convert.ToDecimal(amountLabel.Text),
+            //    DateOfPurchase = SelectedDate,
+            //    Category = pickerCategory.SelectedItem.ToString()
+
+            //};
+
+            // File.WriteAllText(expensePath, expenses.toString());
         }
 
         private  async void OnExpenseAdd_Clicked(object sender, EventArgs e)

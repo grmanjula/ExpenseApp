@@ -8,24 +8,38 @@
              x:Class="ExpenseApp.ExpenseEntryPage">
     <ContentPage.Content>
         <StackLayout>
-
-            <Editor x:Name="expenseeditorName"
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Editor x:Name="expenseeditorName"
                     Placeholder="Enter the name of your Expense"
-                   Text="{Binding Name}"                    
-                    HeightRequest="100" />
-            <Editor x:Name="expenseeditorDate"
+                   Text="{Binding Text}"                    
+                    HeightRequest="100" Grid.Row="2" />
+            <!--<Editor x:Name="expenseeditorDate"
                     Placeholder="Enter the Date of your Expense"
-                    Text="{Binding Date}"                    
-                    HeightRequest="100" />
+                    Text="{Binding ExpenseDate}"                    
+                    HeightRequest="100" />-->
+
+            <DatePicker x:Name="expenseeditorDate"
+                            MinimumDate="1/1/2020"
+                            MaximumDate="12/31/2050"
+                        
+                            DateSelected="expenseeditorDate_DateSelected" Grid.Row="3"/>
             <Editor x:Name="expenseeditorAmount"
                     Placeholder="Enter the Expense Amount"
                     Text="{Binding Amount}"                    
-                    HeightRequest="100"/>
-            <Editor x:Name="SelectExpenseCategoryIcon"
+                    HeightRequest="100" Grid.Row="4"/>
+            <!--<Editor x:Name="SelectExpenseCategory"
                     Placeholder="Select the category of your Expense"
                     Text="{Binding Category}"                    
-                    HeightRequest="100" />
-            <Picker x:Name="CategoryPicker"  HorizontalOptions="Center">
+                    HeightRequest="100" />-->
+                <Picker x:Name="CategoryPicker"  HorizontalOptions="Center" 
+                        Title ="select a category" Grid.Row="5">
                 <Picker.Items>
                     <x:String>Food</x:String>
                     <x:String>Rent</x:String>
@@ -33,10 +47,21 @@
                     <x:String>Education</x:String>
                     <x:String>Miscellanous</x:String>
                 </Picker.Items>
-                
+             
 
             </Picker>
-            
+            <!--<picker x:name="selectexpensecategory"  grid.row="4" 
+                title="select a category" fontsize="large" 
+                titlecolor="red">
+                <picker.items>
+                    <x:string>food</x:string>
+                    <x:string>travel</x:string>
+                    <x:string>insurance</x:string>
+                    <x:string>utilities</x:string>
+                    <x:string>miscellaneous</x:string>
+                </picker.items>
+            </picker>-->
+</Grid>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width ="*"  />

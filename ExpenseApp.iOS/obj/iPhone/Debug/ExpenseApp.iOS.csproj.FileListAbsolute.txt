@@ -1,11 +1,3 @@
-C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
-C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
-C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
-C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.iOS\obj\iPhone\Debug\coremlc\_PartialAppManifest.items
-C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.iOS\obj\iPhone\Debug\coremlc\_BundleResourceWithLogicalName.items
-C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.iOS\obj\iPhone\Debug\optimized\
-C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.iOS\obj\iPhone\Debug\ExpenseApp.iOS.csprojAssemblyReference.cache
-C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.iOS\obj\iPhone\Debug\ExpenseApp.iOS.csproj.CoreCompileInputs.cache
 C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.iOS\bin\iPhone\Debug\ExpenseApp.iOS.exe
 C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.iOS\bin\iPhone\Debug\ExpenseApp.iOS.pdb
 C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.iOS\bin\iPhone\Debug\Xamarin.Essentials.dll
@@ -53,6 +45,14 @@ C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.iOS\bin\iPhone\Debug\zh-Hans\X
 C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.iOS\bin\iPhone\Debug\zh-Hant\Xamarin.Forms.Platform.iOS.resources.dll
 C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.iOS\bin\iPhone\Debug\ExpenseApp.dll
 C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.iOS\bin\iPhone\Debug\ExpenseApp.pdb
+C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
+C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.iOS\obj\iPhone\Debug\coremlc\_PartialAppManifest.items
+C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.iOS\obj\iPhone\Debug\coremlc\_BundleResourceWithLogicalName.items
+C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.iOS\obj\iPhone\Debug\optimized\
+C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.iOS\obj\iPhone\Debug\ExpenseApp.iOS.csprojAssemblyReference.cache
+C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.iOS\obj\iPhone\Debug\ExpenseApp.iOS.csproj.CoreCompileInputs.cache
 C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.iOS\obj\iPhone\Debug\XamlC.stamp
 C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.iOS\obj\iPhone\Debug\ExpenseApp.iOS.csproj.CopyComplete
 C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.iOS\obj\iPhone\Debug\ExpenseApp.iOS.exe
