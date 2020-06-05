@@ -38,14 +38,14 @@
                     Placeholder="Select the category of your Expense"
                     Text="{Binding Category}"                    
                     HeightRequest="100" />-->
-                <Picker x:Name="CategoryPicker"  HorizontalOptions="Center" 
-                        Title ="select a category" Grid.Row="5">
+                <Picker x:Name="CategoryPicker" Grid.Row="5" HorizontalOptions="StartAndExpand"
+                        Title ="select a category" >
                 <Picker.Items>
                     <x:String>Food</x:String>
                     <x:String>Rent</x:String>
                     <x:String>Insurance</x:String>
                     <x:String>Education</x:String>
-                    <x:String>Miscellanous</x:String>
+                    <x:String>Miscellaneous</x:String>
                 </Picker.Items>
              
 

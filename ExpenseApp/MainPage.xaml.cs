@@ -18,7 +18,9 @@ namespace ExpenseApp
         public MainPage()
         {
             InitializeComponent();
-            /*var files = Directory.EnumerateFiles(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "*.expenses.txt");
+           // To delete expense files
+
+          /*  var files = Directory.EnumerateFiles(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "*.expenses.txt");
             foreach (var filename in files)
             {
                 File.Delete(filename);
@@ -27,8 +29,19 @@ namespace ExpenseApp
         protected override void OnAppearing()
         {
             //return;
+            var BudgetPath = Path.Combine
+                (Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+               "ExpenseBudget.txt");
+            budget.Text = File.ReadAllText(BudgetPath);
 
-            //Budget.Text = $"BudgetExpense is {Budget}";
+            //budget.Text = File.ReadAllText(
+            //  Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),ExpenseBudget.txt)
+            //   ); 
+
+            // File.ReadAllText()
+            //budget.Text = $"BudgetExpense is {budget.Text}";
+           // budget.Text = $"BudgetExpense is {ExpenseEntryPage.}"
+
             //M
           //  budget.Text = $"BudgetExpense is {Budget}";
 
@@ -41,8 +54,8 @@ namespace ExpenseApp
                 string[] dataSplit = data.Split('\n');
 
                 // Do not populate the expenses when there are no records yet
-                if (dataSplit.Length <= 1)
-                    return;
+               // if (dataSplit.Length <= 1)
+                   // return;
 
                // Console.WriteLine(dataSplit);
 
@@ -62,12 +75,31 @@ namespace ExpenseApp
                 
             }
 
-            listView.ItemsSource = expenses;
-           // listView.ItemsSource = expenses.OrderBy(e => e.ExpenseDate).ToList();
+          //  listView.ItemsSource = notes.OrderBy(n => n.Date).ToList();
+          //  listView.ItemsSource = expenses.Oder
+           //listView.ItemsSource = expenses.OrderByDescending()
+            listView.ItemsSource = expenses.OrderBy(e => e.ExpenseDate).ToList();
         }
-        
-            
-        
+
+        private async void OnSaveBudgetButtonClicked(object sender, EventArgs e)
+        {
+            var expenseBudgetPath = Path.Combine
+                (Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+               "ExpenseBudget.txt");
+            File.WriteAllText(expenseBudgetPath, budget.Text);
+
+            await Navigation.PushModalAsync(new ExpenseEntryPage
+            {
+                Budget = budget.Text
+            });
+        }
+
+
+        private void OnDeleteBudgetButtonClicked(object sender, EventArgs e)
+        {
+
+        }
+
         private async void AddMoreExpensesButton_Clicked(object sender, EventArgs e)
         {
             //var expensePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.
