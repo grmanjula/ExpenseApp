@@ -13,43 +13,6 @@ namespace ExpenseApp.Models
         public decimal Amount { get; set; }
         public string ImageFile { get; set; }
         public string Category { get; set; }
-        //public enum Category { Food, Rent, Insurance, Education, Miscellanous }
-
-//        public void ReturnImage()
-//        {
-//            ImageFile.Source = (Device.RuntimePlatform == Device.Android) ? ImageSource.FromFile("FavoriteProfile.png") : ImageSource.FromFile("Images/sports.jpg")
-//}
-        //public string toString()
-        //{
-        //    return $"{ExpenseName}\n{ExpenseDate}\n{Amount}\n{Category}";          
-        //}
-        //public enum CategoryPicker
-        //{
-        //    Home,
-        //    Entertainment,
-        //    Food,
-        //    Charity,
-        //    Utilities,
-        //    Auto,
-        //    Education,
-        //    HelathAndWellness,
-        //    Miscellaneous
-        //};
-
        
-        //M
-        //public Expense(string text, string filename,DateTime expensedate)
-        //{
-        //    Text = text;
-        //    FileName = filename;
-        //    ExpenseDate = expensedate;
-
-        //}
-
-        ////M
-        //public Expense()
-        //{
-
-        //}
     }
 }

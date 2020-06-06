@@ -43,19 +43,11 @@ namespace ExpenseApp
 
         private async void CancelButtonClicked(object sender, EventArgs e)
         {
-            //var expense = (Expense)BindingContext;
-            //if(File.Exists(expense.FileName))
-            //{
-            //    File.Delete(expense.FileName);
-            //}
-            // expenseeditorName.Text = string.Empty;
             await Navigation.PopModalAsync();
-
         }
         private void expenseeditorDate_DateSelected(object sender, DateChangedEventArgs e)
         {
             SelectedDate = e.NewDate;
-
         }
     }
 }

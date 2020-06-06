@@ -19,7 +19,6 @@ namespace ExpenseApp
         {
             InitializeComponent();
            // To delete expense files
-
             var files = Directory.EnumerateFiles(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "*.expenses.txt");
             foreach (var filename in files)
             {
@@ -33,35 +32,16 @@ namespace ExpenseApp
                 (Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
                "ExpenseBudget.txt");
             budget.Text = File.ReadAllText(BudgetPath);
-
-            //budget.Text = File.ReadAllText(
-            //  Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),ExpenseBudget.txt)
-            //   ); 
-
-            // File.ReadAllText()
-            //budget.Text = $"BudgetExpense is {budget.Text}";
-           // budget.Text = $"BudgetExpense is {ExpenseEntryPage.}"
-
-            //M
-          //  budget.Text = $"BudgetExpense is {Budget}";
-
-            var expenses = new List<Expense>();
+           var expenses = new List<Expense>();
 
            var files = Directory.EnumerateFiles(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "*.expenses.txt");
             foreach (var filename in files)
             {
                 var data = File.ReadAllText(filename);
                 string[] dataSplit = data.Split('\n');
-
-                // Do not populate the expenses when there are no records yet
-                // if (dataSplit.Length <= 1)
-                // return;
-
-                // Console.WriteLine(dataSplit);
-
+                               
                 var expense = new Expense
                 {
-                    // ExpenseName =
                     ExpenseName = dataSplit[0],
                     ExpenseDate = Convert.ToDateTime(dataSplit[1]),
                     Amount = Convert.ToDecimal(dataSplit[2]),
@@ -74,24 +54,14 @@ namespace ExpenseApp
                 
             }
 
-          //  listView.ItemsSource = notes.OrderBy(n => n.Date).ToList();
-          //  listView.ItemsSource = expenses.Oder
-           //listView.ItemsSource = expenses.OrderByDescending()
             listView.ItemsSource = expenses.OrderBy(e => e.ExpenseDate).ToList();
             
-            ////Code to Render Image
-            //Image assignImageFromFile = new Image
-            //{
-            //    Source = (Device.RuntimePlatform == Device.Android) ? ImageSource.FromFile("Education.png") : ImageSource.FromFile("Rent.jpg"),
-                
-            //};
-
         }
 
         private string GetImage(string category)
         {
             string imagePath = string.Empty;
-            // if category is education, associate education.gif to image
+           
             if (string.Compare(category, "Rent", true) == 0)
             {
                 imagePath = "Rent.png";
@@ -102,10 +72,8 @@ namespace ExpenseApp
             }
           if (string.Compare(category, "Insurance", true) == 0)
             {
-              
-                    imagePath = "Insurance.png";
-             
-            }
+                     imagePath = "Insurance.png";
+             }
             if (string.Compare(category, "Education", true) == 0)
             {
 
@@ -113,13 +81,10 @@ namespace ExpenseApp
 
             }
 
-            //if (string.Compare(category, "Miscellaneous", true) == 0)
-            if (string.Compare(category, "Miscellaneous", true) == 0)
+           if (string.Compare(category, "Miscellaneous", true) == 0)
             {
-         
-                    imagePath = "Miscelleneous.png";
-               
-            }
+                 imagePath = "Miscelleneous.png";
+             }
 
             return imagePath;
         }
@@ -145,15 +110,10 @@ namespace ExpenseApp
 
         private async void AddMoreExpensesButton_Clicked(object sender, EventArgs e)
         {
-            //var expensePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.
-            //   LocalApplicationData),
-            //   $"{Path.GetRandomFileName()}.expenses.txt");
             await Navigation.PushModalAsync(new ExpenseEntryPage
             {
                 BindingContext = new Expense()
             });
-
-
           
         }
 
