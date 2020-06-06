@@ -8,57 +8,41 @@
              x:Class="ExpenseApp.MainPage">
     <ContentPage.Content>
         <ScrollView BackgroundColor="White">
-            <StackLayout Margin="20,35,20,20">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-
                     </Grid.RowDefinitions>
-                    <!--<StackLayout Margin="20,35,20,20">-->
-        <Label Text="Budget for the Month" Grid.Row="2"
-               HorizontalOptions="FillAndExpand" LineBreakMode="WordWrap" FontSize="Default"
-               TextDecorations="None" FontAttributes="Bold" TextColor="Black"/>
-                    <Editor x:Name="budget" Grid.Row="3"
-               
-                Placeholder="Set your budget for this month" PlaceholderColor="Black"
-                HeightRequest="70"/>
-                    <Button Text="Save" Clicked="OnSaveBudgetButtonClicked"/>
-                    <Button Text="Delete" Grid.Column="1" Clicked="OnDeleteBudgetButtonClicked" />
-                    <Button Text="Add Expense" Margin="60,0,0,0" HorizontalOptions="EndAndExpand" VerticalOptions="End"  Clicked ="OnExpenseAdd_Clicked" Grid.Row="1"/>
-       <Label Text="Expenses List" FontSize="25" TextColor="Coral" Grid.Row="4"/>
-                 
-            <ListView x:Name="listView" Grid.Row="5" RowHeight="150">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell Height="180">
-                            <Frame OutlineColor="GreenYellow"  HeightRequest="1000" BackgroundColor="Black" 
-                                        Padding="1"  >
-                                <StackLayout>
-                                    <StackLayout Orientation="Vertical"  VerticalOptions="FillAndExpand">
-                                        <Label Text="{x:Binding ExpenseName}"
-                                                       FontSize="Large" TextColor="White"/>
-                                        <Label 
-                                                Text="{x:Binding ExpenseDate}" FontSize="Large" TextColor="White"/>
-
-                                        <Label Text="{x:Binding Amount}" FontSize="Large" TextColor="White"/>
-
-
-                                        <Label Text="{x:Binding Category}" FontSize="Large" TextColor="White"/>
-
-
+                    <StackLayout Grid.Row="1">
+                        <Label Text="Budget for the Month" HorizontalOptions="FillAndExpand" LineBreakMode="WordWrap" FontSize="Default" TextDecorations="None" FontAttributes="Bold" TextColor="Black"/>
+                        <Editor x:Name="budget" Placeholder="Set your budget for this month" PlaceholderColor="Black"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Button Text="Save" Clicked="OnSaveBudgetButtonClicked"/>
+                            <Button Text="Delete" Clicked="OnDeleteBudgetButtonClicked" />
+                            <Button Text="Add Expense" Clicked ="OnExpenseAdd_Clicked"/>
+                        </StackLayout>
+                    <Label Text="Expenses List" FontSize="Default" TextColor="Black" FontAttributes="Bold"/>
+                    </StackLayout>
+                <ListView x:Name="listView" RowHeight="100" Grid.Row="2">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame OutlineColor="LightGray" Padding="1"  >
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                        <Image x:Name="fileImage" Source="{x:Binding ImageFile}" WidthRequest="50" HeightRequest="50"/>
+                                        <StackLayout Orientation="Vertical">
+                                            <Label Text="{x:Binding ExpenseName, StringFormat='    Name: {0}'}"/>
+                                            <Label  Text="{x:Binding ExpenseDate, StringFormat='    Date: {0:MM dd yyyy}'}" />
+                                            <Label Text="{x:Binding Amount, StringFormat='    Amount: {0}'}"/>
+                                            <Label Text="{x:Binding Category, StringFormat='    Category: {0}'}"/>                                            
+                                        </StackLayout>
                                     </StackLayout>
-                                </StackLayout>
-                            </Frame>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-                </Grid>
-            </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

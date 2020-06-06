@@ -15,10 +15,14 @@ namespace ExpenseApp.Models
         public string Category { get; set; }
         //public enum Category { Food, Rent, Insurance, Education, Miscellanous }
 
-        public string toString()
-        {
-            return $"{ExpenseName}\n{ExpenseDate}\n{Amount}\n{Category}";          
-        }
+//        public void ReturnImage()
+//        {
+//            ImageFile.Source = (Device.RuntimePlatform == Device.Android) ? ImageSource.FromFile("FavoriteProfile.png") : ImageSource.FromFile("Images/sports.jpg")
+//}
+        //public string toString()
+        //{
+        //    return $"{ExpenseName}\n{ExpenseDate}\n{Amount}\n{Category}";          
+        //}
         //public enum CategoryPicker
         //{
         //    Home,

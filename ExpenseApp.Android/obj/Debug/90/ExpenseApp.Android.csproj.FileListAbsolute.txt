@@ -63,6 +63,11 @@ C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.Android\obj\Debug\90\res\mipma
 C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.Android\obj\Debug\90\res\mipmap-xxhdpi\launcher_foreground.png
 C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.Android\obj\Debug\90\res\mipmap-xxxhdpi\icon.png
 C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.Android\obj\Debug\90\res\mipmap-xxxhdpi\launcher_foreground.png
+C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.Android\obj\Debug\90\res\drawable\education.png
+C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.Android\obj\Debug\90\res\drawable\food.png
+C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.Android\obj\Debug\90\res\drawable\insurance.png
+C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.Android\obj\Debug\90\res\drawable\miscelleneous.png
+C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.Android\obj\Debug\90\res\drawable\rent.png
 C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.Android\obj\Debug\90\uploadflags.txt
 C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.Android\obj\Debug\90\resolvedassemblies.hash
 C:\Users\user1\source\repos\ExpenseApp\ExpenseApp.Android\obj\Debug\90\android\assets\ExpenseApp.Android.dll

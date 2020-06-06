@@ -85,9 +85,7 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\drawable\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\ExpenseApp\ExpenseApp.csproj">
       <Project>{310DD9BF-EFB4-4CAF-99FE-7F6CD0F54357}</Project>
@@ -108,6 +106,31 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Education.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\..\..\..\Desktop\ImagesMobileAppProject\Education.png">
+      <Link>Resources\drawable\Education.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\..\..\..\Desktop\ImagesMobileAppProject\Food.png">
+      <Link>Resources\drawable\Food.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\..\..\..\Desktop\ImagesMobileAppProject\Insurance.png">
+      <Link>Resources\drawable\Insurance.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\..\..\..\Desktop\ImagesMobileAppProject\Miscelleneous.png">
+      <Link>Resources\drawable\Miscelleneous.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\..\..\..\Desktop\ImagesMobileAppProject\Rent.png">
+      <Link>Resources\drawable\Rent.png</Link>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
